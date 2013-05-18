@@ -1,0 +1,19 @@
+{
+  "name": "hdoc",
+  "version": "0.1.0",
+  "description": "A here-document utility",
+  "keywords": ["here", "document", "heredoc"],
+  "author": "tasogarepg <tasogare.pg@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/tasogarepg/hdoc",
+  "repository": "git://github.com/tasogarepg/hdoc.git",
+  "main": "lib/hdoc.js",
+  "engines": { "node": ">= 0.6.0" },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
