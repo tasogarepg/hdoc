@@ -1,6 +1,6 @@
 {
   "name": "hdoc",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A here-document utility",
   "keywords": ["here", "document", "heredoc"],
   "author": "tasogarepg <tasogare.pg@gmail.com>",
