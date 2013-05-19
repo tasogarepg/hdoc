@@ -20,7 +20,7 @@ cc
     assert.equal(str, [
       'aa',
       '  bb',
-      'cc',
+      'cc'
     ].join('\n'));
   });
 
@@ -33,7 +33,7 @@ cc
     assert.equal(str, [
       '      aa',
       '        bb',
-      '      cc',
+      '      cc'
     ].join('\n'));
   });
 
@@ -46,7 +46,7 @@ cc
     assert.equal(str, [
       'aa',
       '  bb',
-      'cc',
+      'cc'
     ].join('\n'));
   });
 
@@ -59,7 +59,7 @@ cc
     assert.equal(str, [
       '\t\t\taa',
       '\t\t\t\tbb',
-      '\t\t\tcc',
+      '\t\t\tcc'
     ].join('\n'));
   });
 
@@ -72,7 +72,7 @@ cc
     assert.equal(str, [
       'aa',
       '\tbb',
-      'cc',
+      'cc'
     ].join('\n'));
   });
 
@@ -91,7 +91,7 @@ cc
       '      str1',
       '      20',
       '      str1',
-      '      bb',
+      '      bb'
     ].join('\n'));
   });
 
@@ -110,7 +110,7 @@ cc
       'str1',
       '20',
       '  str1',
-      'bb',
+      'bb'
     ].join('\n'));
   });
 
