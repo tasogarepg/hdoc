@@ -95,4 +95,23 @@ cc
     ].join('\n'));
   });
 
+  it('embed vals and cut indents', function() {
+    var v1 = 'str1';
+    var v2 = 20;
+    var str = eval(hdoci)(function() {/*
+      aa
+      ${v1}
+      ${v2}
+        ${v1}
+      bb
+    */});
+    assert.equal(str, [
+      'aa',
+      'str1',
+      '20',
+      '  str1',
+      'bb',
+    ].join('\n'));
+  });
+
 });
