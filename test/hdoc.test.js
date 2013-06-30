@@ -114,4 +114,50 @@ cc
     ].join('\n'));
   });
 
+  it('escape special character for comment', function() {
+    var str = eval(hdoc)(function() {/*
+      /\* aa *\/
+      \\\\bb
+    */});
+    assert.equal(str, [
+      '      /* aa */',
+      '      \\\\bb'
+    ].join('\n'));
+  });
+
+  it('escape special character for comment and cut indents', function() {
+    var str = eval(hdoci)(function() {/*
+      /* aa *\/
+      \\\\bb
+    */});
+    assert.equal(str, [
+      '/* aa */',
+      '\\\\bb'
+    ].join('\n'));
+  });
+
+  it('escape special character for embeding vals', function() {
+    var v1 = 'str1';
+    var str = eval(hdoc)(function() {/*
+      ${v1}
+      \${v1}
+    */});
+    assert.equal(str, [
+      '      str1',
+      '      ${v1}',
+    ].join('\n'));
+  });
+
+  it('escape special character for embeding vals and cat indents', function() {
+    var v1 = 'str1';
+    var str = eval(hdoci)(function() {/*
+      ${v1}
+        \${v1}
+    */});
+    assert.equal(str, [
+      'str1',
+      '  ${v1}',
+    ].join('\n'));
+  });
+
 });
